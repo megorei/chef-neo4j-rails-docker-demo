@@ -1,7 +1,7 @@
 name             'docker-rails-neo4j'
-maintainer       'YOUR_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'Dieter Pisarewski'
+maintainer_email 'dp@megorei.com'
 license          'All rights reserved'
-description      'Installs/Configures docker-rails-neo4j'
-long_description 'Installs/Configures docker-rails-neo4j'
 version          '0.1.0'
+
+depends 'docker'
