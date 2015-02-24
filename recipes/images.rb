@@ -20,3 +20,7 @@ end
 docker_image 'tpires/neo4j' do
   action :pull_if_missing
 end
+
+docker_image 'dpisarewski/nginx-rails-proxy' do
+  action :pull_if_missing
+end

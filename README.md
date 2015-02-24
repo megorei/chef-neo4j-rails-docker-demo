@@ -1,42 +1,24 @@
 # docker-rails-neo4j-cookbook
 
-TODO: Enter the cookbook description here.
+## Installation
 
-## Supported Platforms
-
-TODO: List your supported platforms.
-
-## Attributes
-
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['docker-rails-neo4j']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+    bundle install
 
 ## Usage
 
-### docker-rails-neo4j::default
+Bootstrap server:
 
-Include `docker-rails-neo4j` in your node's `run_list`:
+    knife solo prepare root@virtualbox
 
-```json
-{
-  "run_list": [
-    "recipe[docker-rails-neo4j::default]"
-  ]
-}
-```
+Install cookbooks and put them into the repo
 
-## License and Authors
+    berks install & berks vendor
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Deploy application:
+
+    knife solo cook -V root@virtualbox attributes/deploy.json
+
+Run db seeds:
+
+    knife solo cook -V root@virtualbox attributes/seeds.json
+
