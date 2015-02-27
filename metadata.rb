@@ -4,4 +4,4 @@ maintainer_email 'dp@megorei.com'
 license          'All rights reserved'
 version          '0.1.0'
 
-depends 'docker'
+depends 'docker', '0.36.0'
